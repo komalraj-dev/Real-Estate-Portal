@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-stone-bg text-ink font-body antialiased;
+}
+
+::selection {
+  @apply bg-brass/20;
+}
+
+/* visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #B8863B;
+  outline-offset: 2px;
+}
+
+.container-xl {
+  @apply max-w-7xl mx-auto px-5 sm:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-ink text-white px-6 py-3 rounded-sm font-body font-medium tracking-wide hover:bg-ink-700 transition-colors;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 border border-ink text-ink px-6 py-3 rounded-sm font-body font-medium tracking-wide hover:bg-ink hover:text-white transition-colors;
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center gap-2 bg-brass text-white px-6 py-3 rounded-sm font-body font-medium tracking-wide hover:bg-brass-600 transition-colors;
+}
+
+.input-field {
+  @apply w-full border border-stone-line bg-white px-4 py-3 text-sm rounded-sm focus:border-ink outline-none transition-colors;
+}
+
+.section-eyebrow {
+  @apply font-mono text-xs tracking-[0.2em] uppercase text-brass-600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
